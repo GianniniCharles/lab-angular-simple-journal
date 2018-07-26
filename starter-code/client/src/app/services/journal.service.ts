@@ -14,4 +14,15 @@ export class JournalService {
   }
 
 
+  createEntry(theEntry) {
+    console.log('Service sees' + ' '+ theEntry.title, theEntry.content)
+    return this.http.post('http://localhost:3000/api/journal-entries', {title: theEntry.title, content: theEntry.content})
+    .map((res)=>{ res.json(); console.log(res)});
+  }
+
+
+
+
+
+
 }

@@ -9,7 +9,7 @@ import { getComponentViewDefinitionFactory } from '../../node_modules/@angular/c
 })
 export class AppComponent {
   title = 'app works!';
-
+  newEntry: any = {}
   journals: any;
   constructor(private localJournals: JournalService) {}
 
@@ -21,6 +21,11 @@ ngOnInit() {}
     .subscribe((entries)=> this.journals = entries);
   }
 
+
+sendEntry(theEntry) {
+  this.localJournals.createEntry(theEntry);
+  console.log('Component Sees' +' ' + theEntry.title, theEntry.content);
+}
 
 
 

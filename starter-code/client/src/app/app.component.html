@@ -1,6 +1,19 @@
 <h1>Hi :) </h1>
 
 
+<form (submit) ="sendEntry(newEntry)">
+
+  <input type = "text" name ="entryName" [(ngModel)] = "newEntry.title">
+  <textarea name = "entryContent" [(ngModel)] = "newEntry.content"></textarea>
+
+  <button>Submit</button>
+
+</form>
+
+
+
+
+
 <button (click)="getEntry()">Get the Journals</button>
 <hr>
 <div *ngFor="let onejournal of journals">
