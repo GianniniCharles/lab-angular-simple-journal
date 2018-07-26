@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Hi :) </h1>
+
+
+<button (click)="getEntry()">Get the Journals</button>
+<hr>
+<div *ngFor="let onejournal of journals">
+  <li>{{onejournal.title}}</li>
+  <li>{{onejournal.content}}</li>  
+  <hr>
+</div>
+
