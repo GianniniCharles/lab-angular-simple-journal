@@ -23,7 +23,10 @@ ngOnInit() {}
 
 
 sendEntry(theEntry) {
-  this.localJournals.createEntry(theEntry);
+  const that = this;
+  this.localJournals.createEntry(theEntry)
+  .subscribe((wow)=>{});
+  that.localJournals.getEntry()
   console.log('Component Sees' +' ' + theEntry.title, theEntry.content);
 }
 
