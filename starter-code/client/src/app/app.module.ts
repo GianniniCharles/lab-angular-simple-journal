@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { JournalService } from './services/journal.service';
+import { JournalEntriesComponent } from './journal-entries/journal-entries.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JournalEntriesComponent
   ],
   imports: [
     BrowserModule,
