@@ -8,8 +8,6 @@ import { getComponentViewDefinitionFactory } from '../../node_modules/@angular/c
 })
 export class AppComponent {
   title = 'app works!';
-  newEntry: any = {}
-  journals: any;
   constructor() {}
 
 ngOnInit() {}

@@ -23,6 +23,10 @@ export class JournalService {
 
 
 
+  getOneEntry(theIdOfTheEntry){
+    return this.myHttp.get('http://localhost:3000/api/journal-entries/'+theIdOfTheEntry)
+    .map((res)=> res.json());
+  }
 
 
 

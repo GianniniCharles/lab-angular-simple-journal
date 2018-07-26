@@ -1,3 +1,6 @@
+<h1> WELCOME TO THE HOME PAGE</h1>
+
+
 <h1>Gaze Upon All These Journal Entries</h1>
 
 <form (submit) ="addNew()">
@@ -17,6 +20,7 @@
 
   <h3>{{oneEntry.title}}</h3>
   <p>{{oneEntry.content}}</p>
+  <a [routerLink]="['entries', oneEntry._id]">See Details</a>
 
 </div>
 
